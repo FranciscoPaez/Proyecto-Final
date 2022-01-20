@@ -1,0 +1,340 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+}
+
+body{
+	height: 100vh;
+	width: 100%;
+    background: #ee9ca7;  
+    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+}
+
+header{
+    font-weight: 700;
+}
+
+
+.header--container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0; 
+}
+
+.header--nav--ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem; /*5 px*/
+}
+
+.header--nav--ul--li{
+    padding: 0.5rem 1rem;
+    font-weight: 300;
+    font-size: 0.9rem;
+    list-style: none;
+}
+
+.header--nav--ul--li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 0.3rem 1rem;
+    border-radius: 1.25rem;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.header--nav--ul--li a:hover{
+    background: #f76579;
+    color: #fff;
+}
+
+.header--nav--ul--li:nth-child(3) a{
+    background: #f892a0 !important;
+    color: #fff;
+}
+
+.header--logo i{
+    width: 2rem;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #f892a0;
+}
+
+.header--logo i:hover{
+    color: #f76579;
+}
+
+/* main */
+
+.container .card{
+    position: relative;
+    width: 40rem;
+    height: 450px;
+    background: #ee9ca7;  
+    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    border-radius: 20px;
+    overflow: hidden;   
+    box-shadow: 0px 0px 19px 5px #ad48559c;
+}
+
+.container .card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f76579;  
+    background: -webkit-linear-gradient(to right, #ffdde1, #f76579);
+    background: linear-gradient(to right, #ffdde1, #f76579);
+    clip-path: circle(15rem at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover::before{
+    clip-path: circle(300px at 80% -20%);
+}
+
+.container .card:after{
+    content: 'COFFEE';
+    position: absolute;
+    top: 22%;
+    left: 22%;
+    font-size: 5.8rem;
+    font-weight: 800;
+    color: #f7657998;
+}
+
+
+.container .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10rem;
+    text-align: center; 
+    transition: 1s;
+    z-index: 10;  
+}
+.container .card:hover .contentBx{
+    height: 53%;
+}
+
+
+.container .card .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.747);
+}
+.container .card .contentBx .size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container .card:hover .contentBx .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+
+}
+
+.container .card .contentBx .size span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 2rem;
+    display: inline-block;
+    color: #f76579;
+    margin: 0 1rem;
+    transition: 0.5s;
+}
+
+
+.container .card .contentBx a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.747);
+    border-radius: 1rem;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #f76579;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;  
+}
+.container .card .contentBx a:hover{
+    border:2px solid #f76579;
+    color: #f76579;
+    transition: none;
+}
+.container .card:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+}
+
+
+/* main */
+
+footer{
+    text-align: center;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+footer ul li{
+    position: relative;
+    list-style: none;
+    margin: 0 0.65rem;
+    transform: rotate(0deg) skew(0deg);
+    padding: 1.8rem;
+}
+
+footer ul li span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transition: 0.5s;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem !important;
+}
+footer ul li:hover span{
+    box-shadow: -1px 1px 1px rgb(0,0,0,.1);
+}
+
+
+footer ul li:hover span:nth-child(3){
+    transform: translate(20px, -20px);
+    opacity: .8;
+}
+footer ul li:hover span:nth-child(2){
+    transform: translate(10px, -10px);
+    opacity: .4;
+}
+footer ul li:hover span:nth-child(1){
+    transform: translate(0, 0);
+    opacity: .3;
+}
+footer ul li:nth-child(1) span{
+    background: #ee9ca7;
+}
+footer ul li:nth-child(2) span{
+    background: #ee9ca7;
+}
+footer ul li:nth-child(3) span{
+    background: #ee9ca7;
+}
+footer ul li:nth-child(4) span{
+    background: #ee9ca7;
+}
+footer ul li:nth-child(5) span{
+    background: #ee9ca7;
+}
+footer ul li:nth-child(1):hover span{
+    background: #f76579;
+}
+footer ul li:nth-child(2):hover span{
+    background: #f76579;
+}
+footer ul li:nth-child(3):hover span{
+    background: #f76579;
+}
+footer ul li:nth-child(4):hover span{
+    background: #f76579;
+}
+footer ul li:nth-child(5):hover span{
+    background: #f76579;
+}
+
+
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+
+    h2:after{
+    width: 12rem;
+    }
+
+    .header--logo i{
+        margin-left: 2rem;
+        animation: none;
+    }
+}
+
+
+
+@media screen and (max-width: 480px){
+    header{
+        position: fixed;
+        background: #ee9ca7;  
+        background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+        background: linear-gradient(to right, #ffdde1, #ee9ca7);
+        z-index: 1;
+    }
+
+    .header--logo i{
+        margin-bottom: 1rem;
+    }
+    nav{
+        background-color: #f76579;
+    }
+    
+    .container .card{
+        top: 18rem;
+        position: absolute;
+    }
+
+    .container .card{
+        width: 19rem;
+    }
+
+    .container .card:hover::before{
+        clip-path: circle(150px at 80% 20%);
+    }
+    
+    .container .card:after{
+        content: 'COFFEE';
+        position: absolute;
+        top: 28%;
+        left: 10%;
+        font-size: 4rem;
+        font-weight: 800;
+        color: #f7657998;
+    }
+
+}
